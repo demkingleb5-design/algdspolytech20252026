@@ -1,15 +1,15 @@
-#ifndef SORT_FUNCTIONS_H
+п»ї#ifndef SORT_FUNCTIONS_H
 #define SORT_FUNCTIONS_H
 
 #include "Structs.h"
 
-// Функция сортировки выбором по длине строки
+// Р¤СѓРЅРєС†РёСЏ СЃРѕСЂС‚РёСЂРѕРІРєРё РІС‹Р±РѕСЂРѕРј РїРѕ РґР»РёРЅРµ СЃС‚СЂРѕРєРё
 void sort_by_length(double_linked_list* source_list, double_linked_list* sorted_list);
 
-// Функция удаления элемента
+// Р¤СѓРЅРєС†РёСЏ СѓРґР°Р»РµРЅРёСЏ СЌР»РµРјРµРЅС‚Р°
 void remove_element(double_linked_list* list, list_element* element);
 
-// Функция поиска самой короткой строки в списке
+// Р¤СѓРЅРєС†РёСЏ РїРѕРёСЃРєР° СЃР°РјРѕР№ РєРѕСЂРѕС‚РєРѕР№ СЃС‚СЂРѕРєРё РІ СЃРїРёСЃРєРµ
 list_element* find_min_length_element(double_linked_list* list);
 
 #endif

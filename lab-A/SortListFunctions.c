@@ -1,4 +1,4 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -6,7 +6,7 @@
 #include "CreateListFunctions.h"
 #include "SortListFunctions.h"
 
-// Ïîèñê ñàìîé êîðîòêîé ñòðîêè â ñïèñêå
+// ÐŸÐ¾Ð¸ÑÐº ÑÐ°Ð¼Ð¾Ð¹ ÐºÐ¾Ñ€Ð¾Ñ‚ÐºÐ¾Ð¹ ÑÑ‚Ñ€Ð¾ÐºÐ¸ Ð² ÑÐ¿Ð¸ÑÐºÐµ
 list_element* find_min_length_element(double_linked_list* list) {
     if (list->head == NULL) return NULL;
 
@@ -23,7 +23,7 @@ list_element* find_min_length_element(double_linked_list* list) {
     return min_element;
 }
 
-// Óäàëåíèå ýëåìåíòà èç ñïèñêà
+// Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð¸Ð· ÑÐ¿Ð¸ÑÐºÐ°
 void remove_element(double_linked_list* list, list_element* element) {
     if (element == NULL || list->head == NULL) return;
 
@@ -42,7 +42,7 @@ void remove_element(double_linked_list* list, list_element* element) {
     }
 }
 
-// Ôóíêöèÿ ñîðòèðîâêè âûáîðîì
+// Ð¤ÑƒÐ½ÐºÑ†Ð¸Ñ ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ¸ Ð²Ñ‹Ð±Ð¾Ñ€Ð¾Ð¼
 void sort_by_length(double_linked_list* original_list, double_linked_list* sorted_list) {
     if (original_list->head == NULL) return;
 

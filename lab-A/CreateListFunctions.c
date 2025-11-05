@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS // чтобы работал strncpy
+п»ї#define _CRT_SECURE_NO_WARNINGS // С‡С‚РѕР±С‹ СЂР°Р±РѕС‚Р°Р» strncpy
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,11 +7,11 @@
 #include "Structs.h"
 #include "CreateListFunctions.h"
 
-// Создание элемента
+// РЎРѕР·РґР°РЅРёРµ СЌР»РµРјРµРЅС‚Р°
 list_element* create_element(const char* data) {
     list_element* new_element = (list_element*)malloc(sizeof(list_element));
     if (new_element == NULL) {
-        printf("Ошибка выделения памяти!\n");
+        printf("РћС€РёР±РєР° РІС‹РґРµР»РµРЅРёСЏ РїР°РјСЏС‚Рё!\n");
         return NULL;
     }
 
@@ -24,13 +24,13 @@ list_element* create_element(const char* data) {
     return new_element;
 }
 
-// Инициализация пустого списка
+// РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РїСѓСЃС‚РѕРіРѕ СЃРїРёСЃРєР°
 void initialize_list(double_linked_list* list) {
     list->head = NULL;
     list->tail = NULL;
 }
 
-// Добавление элемента в конец списка
+// Р”РѕР±Р°РІР»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РІ РєРѕРЅРµС† СЃРїРёСЃРєР°
 void add_element(double_linked_list* list, const char* data) {
     list_element* new_element = create_element(data);
     if (new_element == NULL) return;
@@ -46,24 +46,24 @@ void add_element(double_linked_list* list, const char* data) {
     }
 }
 
-// Печать списка
+// РџРµС‡Р°С‚СЊ СЃРїРёСЃРєР°
 void print_list(double_linked_list* list) {
     if (list->head == NULL) {
-        printf("Список пуст!\n");
+        printf("РЎРїРёСЃРѕРє РїСѓСЃС‚!\n");
         return;
     }
 
     list_element* current = list->head;
     int index = 1;
     while (current != NULL) {
-        printf("%d. [ %s ] (%zu символов)\n", index, current->data, strlen(current->data));
+        printf("%d. [ %s ] (%zu СЃРёРјРІРѕР»РѕРІ)\n", index, current->data, strlen(current->data));
         current = current->next;
         index++;
     }
     printf("\n");
 }
 
-// Удаление списка и освобождение памяти
+// РЈРґР°Р»РµРЅРёРµ СЃРїРёСЃРєР° Рё РѕСЃРІРѕР±РѕР¶РґРµРЅРёРµ РїР°РјСЏС‚Рё
 void delete_list(double_linked_list* list) {
     list_element* current = list->head;
     while (current != NULL) {

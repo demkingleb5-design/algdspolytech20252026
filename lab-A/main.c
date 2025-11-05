@@ -1,4 +1,4 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 #include <string.h>
 #include <locale.h>
 
@@ -17,22 +17,22 @@ int main() {
 
 
 	add_element(&OriginalDoubleLinkedList, "YN@$Mg1_");
-	add_element(&OriginalDoubleLinkedList, "t3/ICDå7rewfDLt_");
-	add_element(&OriginalDoubleLinkedList, "3$ztzäuU6ZDàâàâô343åûâdafa");
-	add_element(&OriginalDoubleLinkedList, "*vFSü90!Ufsdgdgh342(*#=!3");
-	add_element(&OriginalDoubleLinkedList, "+-CHfüÿâ6J");
-	add_element(&OriginalDoubleLinkedList, "Ïðèâåò_ß_Î÷åíü_Äëèííàÿ_Ñòðîêà_Íà_Ðóññêîì_ßçûêå");
+	add_element(&OriginalDoubleLinkedList, "t3/ICDÐµ7rewfDLt_");
+	add_element(&OriginalDoubleLinkedList, "3$ztzÐ´uU6ZDÐ°Ð²Ð°Ð²Ñ„343ÐµÑ‹Ð²dafa");
+	add_element(&OriginalDoubleLinkedList, "*vFSÑŒ90!Ufsdgdgh342(*#=!3");
+	add_element(&OriginalDoubleLinkedList, "+-CHfÑŒÑÐ²6J");
+	add_element(&OriginalDoubleLinkedList, "ÐŸÑ€Ð¸Ð²ÐµÑ‚_Ð¯_ÐžÑ‡ÐµÐ½ÑŒ_Ð”Ð»Ð¸Ð½Ð½Ð°Ñ_Ð¡Ñ‚Ñ€Ð¾ÐºÐ°_ÐÐ°_Ð ÑƒÑÑÐºÐ¾Ð¼_Ð¯Ð·Ñ‹ÐºÐµ");
 	add_element(&OriginalDoubleLinkedList, " ");
 	add_element(&OriginalDoubleLinkedList, "");
-	add_element(&OriginalDoubleLinkedList, "!¹;%:?*()*(:%:Þ,ÞÁÞÜÞ,><><>?<}{}{AS");
+	add_element(&OriginalDoubleLinkedList, "!â„–;%:?*()*(:%:Ð®,Ð®Ð‘Ð®Ð¬Ð®,><><>?<}{}{AS");
 	add_element(&OriginalDoubleLinkedList, "ABC");
 
-	printf("Ñïèñîê äî ñîðòèðîâêè:\n");
+	printf("Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð´Ð¾ ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ¸:\n");
 	print_list(&OriginalDoubleLinkedList);
 
 	sort_by_length(&OriginalDoubleLinkedList, &SortedDoubleLinkedList);
 
-	printf("Ñïèñîê ïîñëå ñîðòèðîâêè:\n");
+	printf("Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð¿Ð¾ÑÐ»Ðµ ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ¸:\n");
 	print_list(&SortedDoubleLinkedList);
 
 	delete_list(&OriginalDoubleLinkedList);

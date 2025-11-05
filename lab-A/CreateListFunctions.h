@@ -1,21 +1,21 @@
-#ifndef LIST_FUNCTIONS_H
+п»ї#ifndef LIST_FUNCTIONS_H
 #define LIST_FUNCTIONS_H
 
 #include "Structs.h"
 
-// Создание элемента
+// РЎРѕР·РґР°РЅРёРµ СЌР»РµРјРµРЅС‚Р°
 list_element* create_element(const char* data);
 
-// Инициализация пустого списка
+// РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РїСѓСЃС‚РѕРіРѕ СЃРїРёСЃРєР°
 void initialize_list(double_linked_list* list);
 
-// Добавление элемента в конец списка
+// Р”РѕР±Р°РІР»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РІ РєРѕРЅРµС† СЃРїРёСЃРєР°
 void add_element(double_linked_list* list, const char* data);
 
-// Печать списка
+// РџРµС‡Р°С‚СЊ СЃРїРёСЃРєР°
 void print_list(double_linked_list* list);
 
-// Удаление списка и освобождение памяти
+// РЈРґР°Р»РµРЅРёРµ СЃРїРёСЃРєР° Рё РѕСЃРІРѕР±РѕР¶РґРµРЅРёРµ РїР°РјСЏС‚Рё
 void delete_list(double_linked_list* list);
 
 #endif

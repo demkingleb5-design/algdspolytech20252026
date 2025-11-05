@@ -1,11 +1,11 @@
-#include <gtest/gtest.h>
+ï»¿#include <gtest/gtest.h>
 #include <string.h>
 
 #include "Structs.h"
 #include "CreateListFunctions.h"
 #include "SortListFunctions.h"
 
-// Âñïîìîãàòåëüíûå ôóíêöèè äëÿ òåñòîâ
+// Ð’ÑÐ¿Ð¾Ð¼Ð¾Ð³Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ðµ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸ Ð´Ð»Ñ Ñ‚ÐµÑÑ‚Ð¾Ð²
 double_linked_list create_test_list_with_three_elements() {
     double_linked_list list;
     initialize_list(&list);
@@ -15,7 +15,7 @@ double_linked_list create_test_list_with_three_elements() {
     return list;
 }
 
-// ÒÅÑÒ 1: Ñîçäàíèå ýëåìåíòà
+// Ð¢Ð•Ð¡Ð¢ 1: Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°
 TEST(CreateElementTest, NormalString_ReturnValidElement_no1) {
     list_element* element = create_element("Hello");
 
@@ -27,7 +27,7 @@ TEST(CreateElementTest, NormalString_ReturnValidElement_no1) {
     free(element);
 }
 
-// ÒÅÑÒ 2: Ñîçäàíèå ýëåìåíòà ñ ãðàíè÷íûì ñëó÷àåì
+// Ð¢Ð•Ð¡Ð¢ 2: Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ñ Ð³Ñ€Ð°Ð½Ð¸Ñ‡Ð½Ñ‹Ð¼ ÑÐ»ÑƒÑ‡Ð°ÐµÐ¼
 TEST(CreateElementTest, EmptyString_ReturnValidElement_no2) {
     list_element* element = create_element("");
 
@@ -37,7 +37,7 @@ TEST(CreateElementTest, EmptyString_ReturnValidElement_no2) {
     free(element);
 }
 
-// ÒÅÑÒ 3: Èíèöèàëèçàöèÿ ñïèñêà
+// Ð¢Ð•Ð¡Ð¢ 3: Ð˜Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ ÑÐ¿Ð¸ÑÐºÐ°
 TEST(InitializeListTest, AnyCase_HeadAndTailNull_no3) {
     double_linked_list list;
 
@@ -47,7 +47,7 @@ TEST(InitializeListTest, AnyCase_HeadAndTailNull_no3) {
     EXPECT_EQ(list.tail, nullptr);
 }
 
-// ÒÅÑÒ 4: Äîáàâëåíèå â ïóñòîé ñïèñîê
+// Ð¢Ð•Ð¡Ð¢ 4: Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð² Ð¿ÑƒÑÑ‚Ð¾Ð¹ ÑÐ¿Ð¸ÑÐ¾Ðº
 TEST(AddElementTest, EmptyList_HeadAndTailEqual_no4) {
     double_linked_list list;
     initialize_list(&list);
@@ -60,7 +60,7 @@ TEST(AddElementTest, EmptyList_HeadAndTailEqual_no4) {
     delete_list(&list);
 }
 
-// ÒÅÑÒ 5: Äîáàâëåíèå â íåïóñòîé ñïèñîê
+// Ð¢Ð•Ð¡Ð¢ 5: Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð² Ð½ÐµÐ¿ÑƒÑÑ‚Ð¾Ð¹ ÑÐ¿Ð¸ÑÐ¾Ðº
 TEST(AddElementTest, NonEmptyList_TailUpdated_no5) {
     double_linked_list list;
     initialize_list(&list);
@@ -74,7 +74,7 @@ TEST(AddElementTest, NonEmptyList_TailUpdated_no5) {
     delete_list(&list);
 }
 
-// ÒÅÑÒ 6: Óäàëåíèå ñïèñêà
+// Ð¢Ð•Ð¡Ð¢ 6: Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ ÑÐ¿Ð¸ÑÐºÐ°
 TEST(DeleteListTest, NonEmptyList_HeadAndTailNull_no6) {
     double_linked_list list = create_test_list_with_three_elements();
 
@@ -84,7 +84,7 @@ TEST(DeleteListTest, NonEmptyList_HeadAndTailNull_no6) {
     EXPECT_EQ(list.tail, nullptr);
 }
 
-// ÒÅÑÒ 7: Ïîèñê ìèíèìóìà â ïóñòîì ñïèñêå
+// Ð¢Ð•Ð¡Ð¢ 7: ÐŸÐ¾Ð¸ÑÐº Ð¼Ð¸Ð½Ð¸Ð¼ÑƒÐ¼Ð° Ð² Ð¿ÑƒÑÑ‚Ð¾Ð¼ ÑÐ¿Ð¸ÑÐºÐµ
 TEST(FindMinLengthElementTest, EmptyList_ReturnNull_no7) {
     double_linked_list list;
     initialize_list(&list);
@@ -94,7 +94,7 @@ TEST(FindMinLengthElementTest, EmptyList_ReturnNull_no7) {
     EXPECT_EQ(result, nullptr);
 }
 
-// ÒÅÑÒ 8: Ïîèñê ìèíèìóìà ñ îäíèì ýëåìåíòîì
+// Ð¢Ð•Ð¡Ð¢ 8: ÐŸÐ¾Ð¸ÑÐº Ð¼Ð¸Ð½Ð¸Ð¼ÑƒÐ¼Ð° Ñ Ð¾Ð´Ð½Ð¸Ð¼ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð¼
 TEST(FindMinLengthElementTest, SingleElement_ReturnElement_no8) {
     double_linked_list list;
     initialize_list(&list);
@@ -107,7 +107,7 @@ TEST(FindMinLengthElementTest, SingleElement_ReturnElement_no8) {
     delete_list(&list);
 }
 
-// ÒÅÑÒ 9: Ïîèñê ìèíèìóìà ñ ðàçíûìè äëèíàìè
+// Ð¢Ð•Ð¡Ð¢ 9: ÐŸÐ¾Ð¸ÑÐº Ð¼Ð¸Ð½Ð¸Ð¼ÑƒÐ¼Ð° Ñ Ñ€Ð°Ð·Ð½Ñ‹Ð¼Ð¸ Ð´Ð»Ð¸Ð½Ð°Ð¼Ð¸
 TEST(FindMinLengthElementTest, DifferentLengths_ReturnShortest_no9) {
     double_linked_list list;
     initialize_list(&list);
@@ -122,7 +122,7 @@ TEST(FindMinLengthElementTest, DifferentLengths_ReturnShortest_no9) {
     delete_list(&list);
 }
 
-// ÒÅÑÒ 10: Óäàëåíèå åäèíñòâåííîãî ýëåìåíòà
+// Ð¢Ð•Ð¡Ð¢ 10: Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ ÐµÐ´Ð¸Ð½ÑÑ‚Ð²ÐµÐ½Ð½Ð¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°
 TEST(RemoveElementTest, SingleElement_HeadAndTailNull_no10) {
     double_linked_list list;
     initialize_list(&list);
@@ -134,7 +134,7 @@ TEST(RemoveElementTest, SingleElement_HeadAndTailNull_no10) {
     EXPECT_EQ(list.tail, nullptr);
 }
 
-// ÒÅÑÒ 11: Óäàëåíèå ãîëîâû
+// Ð¢Ð•Ð¡Ð¢ 11: Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ Ð³Ð¾Ð»Ð¾Ð²Ñ‹
 TEST(RemoveElementTest, HeadElement_NewHeadCorrect_no11) {
     double_linked_list list = create_test_list_with_three_elements();
     list_element* old_head = list.head;
@@ -148,7 +148,7 @@ TEST(RemoveElementTest, HeadElement_NewHeadCorrect_no11) {
     delete_list(&list);
 }
 
-// ÒÅÑÒ 12: Óäàëåíèå õâîñòà
+// Ð¢Ð•Ð¡Ð¢ 12: Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ Ñ…Ð²Ð¾ÑÑ‚Ð°
 TEST(RemoveElementTest, TailElement_NewTailCorrect_no12) {
     double_linked_list list = create_test_list_with_three_elements();
     list_element* old_tail = list.tail;
@@ -162,7 +162,7 @@ TEST(RemoveElementTest, TailElement_NewTailCorrect_no12) {
     delete_list(&list);
 }
 
-// ÒÅÑÒ 13: Ñîðòèðîâêà ïóñòîãî ñïèñêà
+// Ð¢Ð•Ð¡Ð¢ 13: Ð¡Ð¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ° Ð¿ÑƒÑÑ‚Ð¾Ð³Ð¾ ÑÐ¿Ð¸ÑÐºÐ°
 TEST(SortByLengthTest, EmptyList_SortedListEmpty_no13) {
     double_linked_list original;
     double_linked_list sorted;
@@ -177,7 +177,7 @@ TEST(SortByLengthTest, EmptyList_SortedListEmpty_no13) {
     delete_list(&sorted);
 }
 
-// ÒÅÑÒ 14: Ñîðòèðîâêà îäíîãî ýëåìåíòà
+// Ð¢Ð•Ð¡Ð¢ 14: Ð¡Ð¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ° Ð¾Ð´Ð½Ð¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°
 TEST(SortByLengthTest, SingleElement_SameElementInSorted_no14) {
     double_linked_list original;
     double_linked_list sorted;
@@ -193,7 +193,7 @@ TEST(SortByLengthTest, SingleElement_SameElementInSorted_no14) {
     delete_list(&sorted);
 }
 
-// ÒÅÑÒ 15: Ñîðòèðîâêà ïî äëèíå
+// Ð¢Ð•Ð¡Ð¢ 15: Ð¡Ð¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ° Ð¿Ð¾ Ð´Ð»Ð¸Ð½Ðµ
 TEST(SortByLengthTest, MixedLengths_SortedByLength_no15) {
     double_linked_list original;
     double_linked_list sorted;
@@ -205,7 +205,7 @@ TEST(SortByLengthTest, MixedLengths_SortedByLength_no15) {
 
     sort_by_length(&original, &sorted);
 
-    // Ïðîâåðÿåì òîëüêî ïåðâûé ýëåìåíò (ñàìûé êîðîòêèé)
+    // ÐŸÑ€Ð¾Ð²ÐµÑ€ÑÐµÐ¼ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð¿ÐµÑ€Ð²Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ (ÑÐ°Ð¼Ñ‹Ð¹ ÐºÐ¾Ñ€Ð¾Ñ‚ÐºÐ¸Ð¹)
     EXPECT_STREQ(sorted.head->data, "X");
 
     delete_list(&sorted);
